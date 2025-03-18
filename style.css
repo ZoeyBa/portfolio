@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hire__me {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.portfolio {
+  color: var(--primary-color);
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+  width: min(25rem, 90%);
+  border-radius: 20%;
+}
+
+
+.resume__section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.resume__section h2 {
+  margin-bottom: 20px; /* Adds space between heading and button */
+  font-size: 24px;
+}
+
+.resume__btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #c300ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.resume__btn:hover {
+  background-color: #333;
+}
+
+
+.projects__section {
+    padding: rem 0;
+    text-align: center;
+}
+
+.projects__section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.projects__section h2::after {
+    content: '';
+    display: block;
+    width: 50px; /* Adjust the width of the underline */
+    height: 4px; /* Adjust the height of the underline */
+    background-color: var(--primary-color);
+    margin: 0.5rem auto; /* Center the underline */
+}
+
+
+
+/* Individual Project */
+.project {
+    background-color: #ffffff; /* White background for projects */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.projects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.project {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+
+
+.project h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin: 1rem 0 0.5rem;
+    text-align: center;
+}
+
+.project p {
+    color: var(--text-light);
+    padding: 0 1rem;
+    text-align: center;
+}
+
+/* View Project Button */
+.view__project {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.view__project:hover {
+    background-color: var(--primary-color-dark);
+}
+
+
+.project:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+
+.project h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin: 1rem 0 0.5rem;
+}
+
+.project p {
+    color: var(--text-light);
+    padding: 0 1rem;
+}
+
+/* View Project Button */
+.view__project {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.view__project:hover {
+    background-color: var(--primary-color-dark);
+}
+
+
+/* Contact Section */
+.contact__section {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: var(--extra-light);
+}
+
+
+.contact__section p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin: 0.5rem 0;
+}
+
+.contact__section a {
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact__section a:hover {
+    color: var(--primary-color-dark);
+}
+.footer {
+    text-align: center; /* Center the text */
+    padding: 1rem 0; /* Add some padding */
+    background-color: var(--extra-light); /* Use a light background color */
+    color: var(--text-dark); /* Use dark text color */
+    position: relative; /* Position relative for any future adjustments */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+}
+
+.footer p {
+    margin: 0; 
+    font-size: 1rem; 
+}
+.comment__section {
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+  background: hsl(0, 0%, 10%);
+  border-radius: 10px;
+  color: white;
+}
+
+
+.comment__section h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.comment__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.comment__form textarea,
+.comment__form input {
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #edd9d9;
+  background: #faf9f9;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+.comment__form button {
+  padding: 10px 20px;
+  background: #ff4500;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.comment__form button:hover {
+  background
+
+}
+
