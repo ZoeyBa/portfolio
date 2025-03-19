@@ -173,13 +173,23 @@ ul li a:hover {
 .image {
   display: grid;
   place-items: center;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  
 }
 
 .image img {
-  width: min(25rem, 90%);
+  max-width:  100%;
   border-radius: 20%;
 }
 
+.hero-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+  height: auto;
+}
 
 .resume__section {
   text-align: center;
